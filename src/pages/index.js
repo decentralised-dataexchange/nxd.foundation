@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Footer from '../components/Footer';
+import Helmet from "react-helmet";
 
 import styles from './index.module.css';
 
@@ -27,6 +28,9 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Enabling trust in the data ecosystem for next-generation data sharing. ">
       <HomepageHeader />
+      <Helmet>
+        <title>NordXDataspace (NXD)</title>
+      </Helmet>
       {/* <main>
         <HomepageFeatures />
       </main> */}
