@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "x",
+  title: "NordXDataspace",
   tagline: "Trust within a dataspace is a requisite for safe and secure data sharing",
   favicon: "img/favicon.ico",
 
