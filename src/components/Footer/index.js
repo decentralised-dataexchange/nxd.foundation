@@ -1,4 +1,5 @@
 import React from "react";
+import Translate, {translate} from '@docusaurus/Translate';
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className="w-xl h-[140px]">
         <div className="border-t-0 border-gray-100 sm:flex sm:items-center sm:justify-between h-full p-6">
           <p className="text-center text-[10px] md:text-sm text-white sm:text-left">
-            Copyright © NordXDataspace Foundation 2023. All rights reserved.
+            Copyright © NordXDataspace Foundation 2023. <Translate>All rights reserved.</Translate>
           </p>
           <div className="footer-menu text-xs-center flex items-center justify-center text-white">
             <a
@@ -18,7 +19,7 @@ export default function Footer() {
               key="footer_option1"
               onclick="activeTabMove(1)"
             >
-              Cookies Policy
+              <Translate>Cookies Policy</Translate>
             </a>
             |
             <a
@@ -26,7 +27,7 @@ export default function Footer() {
               className="text-white hover:text-white active:text-white focus:text-white text-[10px] md:text-sm ml-1 mr-1"
               key="footer_option4"
             >
-              Terms of Service
+              <Translate>Terms of Service</Translate>
             </a>
             |
             <a
@@ -35,7 +36,7 @@ export default function Footer() {
               key="footer_option3"
               onclick="activeTabMove(2)"
             >
-              Privacy Policy
+              <Translate>Privacy Policy</Translate>
             </a>
           </div>
           <ul className="mt-4 flex justify-center gap-6 sm:mt-0 sm:justify-start">

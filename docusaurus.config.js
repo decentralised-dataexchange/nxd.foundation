@@ -30,8 +30,13 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'sv',
+    locales: ['en', 'sv'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+    },
   },
 
   presets: [
@@ -71,6 +76,10 @@ const config = {
             type: "custom-nordxdataspace-logo",
             label: "",
             position: "left"
+          },
+          {
+            type: 'custom-locale-dropdown',
+            position: 'right',
           },
           {
             type: "custom-indy-nav-btn",
