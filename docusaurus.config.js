@@ -78,8 +78,8 @@ const config = {
             position: "left"
           },
           {
-            type: 'custom-locale-dropdown',
-            position: 'right',
+            type: "custom-local-dropdown",
+            position: "right"
           },
           {
             type: "custom-indy-nav-btn",

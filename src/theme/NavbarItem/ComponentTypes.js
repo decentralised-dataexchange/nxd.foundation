@@ -2,7 +2,7 @@ import React from "react";
 import ComponentTypes from "@theme-original/NavbarItem/ComponentTypes";
 import { useLocation } from "@docusaurus/router";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import LocaleDropdownNavbarItem from "./LocaleDropdownNavbarItem";
+import LocaleDropDown from "../../components/LocaleDropdown";
 
 function NordXDataspaceLogoAndTitle(props) {
   const { pathname } = useLocation();
@@ -30,5 +30,5 @@ export default {
   ...ComponentTypes,
   "custom-indy-nav-btn": IndyNavigationBtn,
   "custom-nordxdataspace-logo": NordXDataspaceLogoAndTitle,
-  "custom-locale-dropdown": LocaleDropdownNavbarItem
+  "custom-local-dropdown": LocaleDropDown
 };
