@@ -69,7 +69,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/nxd-social-v2.png",
+      image: "img/nxd-social-v3.png",
       navbar: {
         items: [
           {
