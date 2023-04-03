@@ -21,7 +21,7 @@ function IndyNavigationBtn(props) {
       className="inline-block rounded-full border border-white bg-white text-[12px] px-3 py-2 md:px-3 md:py-2 md:text-[12px] font-medium text-black hover:bg-transparent hover:no-underline hover:text-white focus:outline-none focus:ring active:text-black"
       href="https://indy.nxd.foundation/"
     >
-      Indy testnet
+      Indy Ledger
     </a>
   );
 }
