@@ -10,7 +10,7 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary flex-auto p-0')}>
+    <header className={clsx('hero hero--primary flex-auto p-0 min-h-screen')}>
       <div className="container absolute top-[150px] md:top-[225px]">
         <div className={styles.buttons + ['flex']}>
           <p className='text-3xl md:text-5xl w-full md:w-4/6 text-left break-words whitespace-normal'><Translate>NXD: Enabling trust in the data ecosystem for next-generation data sharing.</Translate></p>
