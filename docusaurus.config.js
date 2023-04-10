@@ -7,7 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "NordXDataspace",
-  tagline: "Trust within a dataspace is a requisite for safe and secure data sharing",
+  tagline:
+    "Trust within a dataspace is a requisite for safe and secure data sharing",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -30,11 +31,11 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'sv'],
+    defaultLocale: "en",
+    locales: ["en", "sv"],
     localeConfigs: {
       en: {
-        htmlLang: 'en-GB',
+        htmlLang: "en-GB",
       },
     },
   },
@@ -62,6 +63,57 @@ const config = {
           postcssOptions.plugins.push(require("autoprefixer"));
           return postcssOptions;
         },
+        injectHtmlTags({ content }) {
+          return {
+            postBodyTags: [
+              `
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.4/dist/cookie-consent-ui.css"
+            />
+            <div id="ccui"></div>
+            <script
+              id="cookie-consent-ui"
+              data-element-id="ccui"
+              data-banner-title="YOUR DATA, YOUR CHOICE"
+              data-banner-company-name="iGrant.io"
+              data-banner-company-link="https://igrant.io"
+              data-banner-cookie-policy-link="https://igrant.io/privacy.html"
+              data-banner-privacy-policy-link="https://igrant.io/privacy.html#privacy"
+              src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.4/dist/cookie-consent-ui.js"
+            ></script>
+            <script>
+              window.CookieConsentUI([
+                {
+                  consent: true,
+                  cookieCategory: "Essential Cookies",
+                  cookieCategoryDescription:
+                    "are necessary for this site to function properly, authenticating logins, for instance. You can only disable essential cookies via browser settings.",
+                  cookiesUsed: ["PrivacyPolicy"],
+                  isMandatory: true,
+                },
+                {
+                  consent: true,
+                  cookieCategory: "Analytical Cookies",
+                  cookieCategoryDescription:
+                    "provide information about how this site is being used so we can improve your experience. Data captured is aggregated and anonymized.",
+                  cookiesUsed: ["Analytics", "_ga", "_gid", "_gat"],
+                  isMandatory: false,
+                },
+                {
+                  consent: false,
+                  cookieCategory: "Advertising Cookies",
+                  cookieCategoryDescription:
+                    "are used for contextual ads from third parties.",
+                  cookiesUsed: ["AdSense"],
+                  isMandatory: false,
+                },
+              ]);
+            </script>
+          `,
+            ],
+          };
+        },
       };
     },
   ],
@@ -75,11 +127,11 @@ const config = {
           {
             type: "custom-nordxdataspace-logo",
             label: "",
-            position: "left"
+            position: "left",
           },
           {
             type: "custom-local-dropdown",
-            position: "right"
+            position: "right",
           },
           {
             type: "custom-indy-nav-btn",
@@ -93,7 +145,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: "light",
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
