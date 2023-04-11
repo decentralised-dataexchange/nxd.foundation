@@ -69,7 +69,7 @@ const config = {
               `
             <link
               rel="stylesheet"
-              href="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.4/dist/cookie-consent-ui.css"
+              href="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.5/dist/cookie-consent-ui.css"
             />
             <div id="ccui"></div>
             <script
@@ -80,7 +80,7 @@ const config = {
               data-banner-company-link="https://nxd.foundation"
               data-banner-cookie-policy-link="https://igrant.io/privacy.html"
               data-banner-privacy-policy-link="https://igrant.io/privacy.html#privacy"
-              src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.4/dist/cookie-consent-ui.js"
+              src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.5/dist/cookie-consent-ui.js"
             ></script>
             <script>
               window.CookieConsentUI([
