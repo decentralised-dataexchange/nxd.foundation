@@ -75,9 +75,9 @@ const config = {
             <script
               id="cookie-consent-ui"
               data-element-id="ccui"
-              data-banner-title="YOUR DATA, YOUR CHOICE"
-              data-banner-company-name="iGrant.io"
-              data-banner-company-link="https://igrant.io"
+              data-banner-title="Enabling trust in the data ecosystem for next-generation data sharing"
+              data-banner-company-name="NordXDataspace"
+              data-banner-company-link="https://nxd.foundation"
               data-banner-cookie-policy-link="https://igrant.io/privacy.html"
               data-banner-privacy-policy-link="https://igrant.io/privacy.html#privacy"
               src="https://cdn.jsdelivr.net/gh/L3-iGrant/cookie-mgmnt@2.0.4/dist/cookie-consent-ui.js"
