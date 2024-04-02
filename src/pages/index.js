@@ -1,16 +1,16 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Footer from '../components/Footer';
+import Footer from '@site/src/components/Footer';
 import Helmet from "react-helmet";
-import Card from '../components/Card';
-import Header from '../components/Header';
+import Card from '@site/src/components/Card';
+import Header from '@site/src/components/Header';
 
 
 const CardList = [
   {
     title: "Data Marketplace APIs",
-    link: "/data-marketplace",
+    link: "/datamarketplace",
     description: (<>
       Get started with dHDSI data marketplace APIs after onboarding to the dHDSI marketplace.
     </>),
@@ -24,7 +24,7 @@ const CardList = [
   },
   {
     title: "Data Intermediation Service Provider APIs",
-    link: "/data-intermediation",
+    link: "/dataintermediation",
     description: (<>
       Get started with Data Intermediatoon Service Provider (DISP) APIs (Consents, Data Exchange and Digital Walets)
     </>),

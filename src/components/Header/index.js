@@ -1,6 +1,5 @@
 import React from 'react';
 import Translate from '@docusaurus/Translate';
-import styles from './../../pages/index.module.css';
 import clsx from 'clsx';
 
 export default function Header() {

@@ -5,7 +5,7 @@ import Footer from '@site/src/components/Footer';
 import Helmet from "react-helmet";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-export default function Domain() {
+export default function DataMarketplace() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout

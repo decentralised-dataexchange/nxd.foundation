@@ -5,7 +5,7 @@ import Footer from '@site/src/components/Footer';
 import Helmet from "react-helmet";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-export default function Domain() {
+export default function DataIntermediation() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
@@ -14,17 +14,23 @@ export default function Domain() {
       <Helmet>
         <title>NordXDataspace (NXD)</title>
         <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css" />
-        <script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js" crossorigin></script>
       </Helmet>
       <div id="swagger-ui"></div>
       <BrowserOnly>
         {() => {
-          window.onload = () => {
+
+          const script = document.createElement("script");
+          script.src = 'https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js'; // whatever url you want here
+          script.charset = "utf-8";
+          script.crossOrigin = true;
+          script.async = false;
+          script.onload = function () {
             window.ui = SwaggerUIBundle({
               url: '/openapi/datamarketplace.yaml',
               dom_id: '#swagger-ui',
             });
-          }
+          };
+          document.head.appendChild(script);
         }}
       </BrowserOnly>
       <Footer />
