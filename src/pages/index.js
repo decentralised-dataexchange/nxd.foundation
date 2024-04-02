@@ -42,9 +42,9 @@ export default function Home() {
         <title>NordXDataspace (NXD)</title>
       </Helmet>
       <div className='container mx-auto flex flex-col mt-4 mb-4'>
-        <div className='flex mt-4 mb-4 space-x-4'>
+        <div className='flex flex-col sm:flex-row mt-4 mb-4 space-y-4 sm:space-y-0 sm:space-x-4'>
           {CardList.map((props, idx) => (
-            <div className="w-1/3 flex">
+            <div className="w-full sm:w-1/3 flex">
               <Card key={idx} {...props} />
             </div>
           ))}
