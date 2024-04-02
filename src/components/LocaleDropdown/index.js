@@ -4,6 +4,7 @@ import NavbarItem from "@theme/NavbarItem";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useAlternatePageUtils } from "@docusaurus/theme-common/internal";
 import { useLocation } from "@docusaurus/router";
+import "./localedropdown.css"
 
 export default function LocaleDropDown() {
   const {
@@ -33,9 +34,9 @@ export default function LocaleDropDown() {
     const to = `${baseTo}${search}${hash}`;
     return {
       label: (
-        <>
+        <a className="rounded-t py-2 px-4 block whitespace-no-wrap">
           {getFlagEmojiForCountry(locale)} {localeConfigs[locale].label}
-        </>
+        </a>
       ),
       lang: localeConfigs[locale].htmlLang,
       to,
@@ -54,33 +55,24 @@ export default function LocaleDropDown() {
   );
 
   return (
-    <div
-      className={clsx(
-        "dropdown",
-        "dropdown-bottom",
-        "dropdown-end",
-        "dropdown-hover",
-        "mr-2",
-        "sm:mr-2"
-      )}
-    >
-      <label tabIndex="0" className="m-1 flex items-center cursor-pointer">
-        {dropDownLabel}
-      </label>
-
-      <ul
-        tabIndex="0"
-        className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-      >
-        {items.map((childItemProps, i) => (
-          <NavbarItem
-            isDropdownItem
-            activeClassName="dropdown__link--active"
-            {...childItemProps}
-            key={i}
-          />
-        ))}
-      </ul>
+    <div className="p-0">
+      <div className="dropdown inline-block relative">
+        <button className=" text-gray-700 font-semibold py-2 px-4 inline-flex items-center">
+          <span className="mr-1">{dropDownLabel}</span>
+        </button>
+        <ul className="dropdown-menu absolute rounded hidden text-gray-700 pt-1 bg-[#edf2f7]">
+          {items.map((childItemProps, i) => (
+            <NavbarItem
+              isDropdownItem
+              activeClassName="dropdown__link--active"
+              {...childItemProps}
+              key={i}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
+
+
   );
 }
