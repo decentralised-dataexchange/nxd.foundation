@@ -1,24 +1,35 @@
 import React from 'react';
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Footer from '../components/Footer';
 import Helmet from "react-helmet";
-import Translate from '@docusaurus/Translate';
-import styles from './index.module.css';
+import Card from '../components/Card';
+import Header from '../components/Header';
 
-function HomepageHeader() {
-  return (
-    <header className={clsx('hero hero--primary flex-auto p-0 min-h-screen')}>
-      <div className="container absolute top-[150px] md:top-[225px]">
-        <div className={styles.buttons + ['flex']}>
-          <p className='text-3xl md:text-5xl w-full md:w-4/6 text-left break-words whitespace-normal'><Translate>NXD: Enabling trust in the data ecosystem for next-generation data sharing.</Translate></p>
-          <p className='mt-10 text-xl md:text-2xl w-full md:w-4/6 text-left opacity-70 text-black break-words'><span className='inline bg-white'><Translate>Trust within a dataspace is a requisite for safe and secure data sharing.</Translate></span></p>
-        </div>
-      </div>
-    </header>
-  );
-}
+
+const CardList = [
+  {
+    title: "Data Marketplace APIs",
+    link: "/data-marketplace",
+    description: (<>
+      Get started with dHDSI data marketplace APIs after onboarding to the dHDSI marketplace.
+    </>),
+  },
+  {
+    title: "Domain-Specific Services APIs",
+    link: "/domain",
+    description: (<>
+      Get started with dHDSI domain specific service APIs
+    </>),
+  },
+  {
+    title: "Data Intermediation Service Provider APIs",
+    link: "/data-intermediation",
+    description: (<>
+      Get started with Data Intermediatoon Service Provider (DISP) APIs (Consents, Data Exchange and Digital Walets)
+    </>),
+  },
+];
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -26,13 +37,22 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Enabling trust in the data ecosystem for next-generation data sharing. ">
-      <HomepageHeader />
+      <Header />
       <Helmet>
         <title>NordXDataspace (NXD)</title>
       </Helmet>
-      {/* <main>
-        <HomepageFeatures />
-      </main> */}
+      <div className='container mx-auto flex flex-col mt-4 mb-4'>
+        <div className='flex mt-4 mb-4 space-x-4'>
+          {CardList.map((props, idx) => (
+            <div className="w-1/3 flex">
+              <Card key={idx} {...props} />
+            </div>
+          ))}
+        </div>
+        <div className="p-0 w-full lg:flex">
+          <Card title={"Trust Anchor"} link={"https://indy.nxd.foundation"} />
+        </div>
+      </div>
       <Footer />
     </Layout>
   );
