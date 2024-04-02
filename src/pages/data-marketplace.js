@@ -15,7 +15,7 @@ export default function Home() {
       <Helmet>
         <title>NordXDataspace (NXD)</title>
       </Helmet>
-      <SwaggerUI url="https://raw.githubusercontent.com/decentralised-dataexchange/data-space-backend/main/openapi/bundled.yaml?token=GHSAT0AAAAAACMLQP424REGYRWJPSWNVZJKZQLWYUQ" />
+      <SwaggerUI url="openapi/data-marketplace.yaml" />
       <Footer />
     </Layout>
   );
