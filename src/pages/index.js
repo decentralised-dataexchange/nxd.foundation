@@ -26,7 +26,7 @@ const CardList = [
     title: "Data Intermediation Service Provider APIs",
     link: "/dataintermediation",
     description: (<>
-      Get started with Data Intermediatoon Service Provider (DISP) APIs (Consents, Data Exchange and Digital Walets)
+      Get started with Data Intermediation Service Provider (DISP) APIs (Consents, Data Exchange and Digital Walets)
     </>),
   },
 ];
